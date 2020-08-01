@@ -11,3 +11,5 @@ After the picture is a bottom, when you click on it, it show you the option to t
 or select a picture from your gallery, to change the user picture.
 
 The users are loaded from https://randomuser.me/.
+
+You can download the APK from https://drive.google.com/file/d/1WvJEOGa3ceuzmh8sUejUqixKiTeY7HFe/view?usp=sharing 
