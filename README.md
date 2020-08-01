@@ -12,4 +12,6 @@ or select a picture from your gallery, to change the user picture.
 
 The users are loaded from https://randomuser.me/.
 
+The development use Ionic 5, Angular9 and capacitor
+
 You can download the APK from https://drive.google.com/file/d/1WvJEOGa3ceuzmh8sUejUqixKiTeY7HFe/view?usp=sharing 

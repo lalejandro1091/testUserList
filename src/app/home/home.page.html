@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Users List
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,8 +13,19 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>    
+    <ion-item *ngFor="let user of usersList;let i=index" (click)="go(i)" >
+        <ion-avatar slot="start">
+          <img [src]="user.picture.large">
+        </ion-avatar>
+        <ion-label>
+          <h3>{{user.name.title}}. {{user.name.first}} {{user.name.last}}</h3>
+          <p>{{user.email}}</p>
+        </ion-label>
+      </ion-item>
+  </ion-list>
+  <ion-infinite-scroll threshold="5%" id="infinite-scroll" (ionInfinite)="loadMore(event)">
+    <ion-infinite-scroll-content loading-spinner="bubbles" loading-text="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

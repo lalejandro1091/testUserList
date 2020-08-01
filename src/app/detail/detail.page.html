@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngIf="user">
+    <ion-label>
+      <div id="divImg">
+        <img [src]="source" id="image"><br>
+        
+        <ion-button expand="round" (click)="openCamera()">Edit photo</ion-button>
+      </div>
+      
+      <h3>Name:</h3>
+      <p>{{user.name.title}}. {{user.name.first}} {{user.name.last}}</p>
+      <h3>Username:</h3>
+      <p>{{user.login.username}}</p>
+      <h3>Email:</h3>
+      <p>{{user.email}}</p>
+      <h3>Location:</h3>
+      <p>{{user.location.state}}, {{user.location.city}}</p>
+      <h3>Time zone:</h3>
+      <p>{{user.location.timezone.offset}}</p>
+      <h3>Registered:</h3>
+      <p>{{user.registered.date}}</p>
+      <h3>Cell phone:</h3>
+      <p>{{user.cell}}</p>
+    </ion-label>
+  </ion-item>
+ 
+  
+</ion-content>
